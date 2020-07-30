@@ -1,0 +1,22 @@
+.headerContainer {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    padding :5px;
+    align-items: center;
+    flex-direction: row;        
+}
+
+.headerLeftContent {
+    margin-right: auto;
+}
+
+.headerRightContent {
+    margin-left: auto;
+}
+
+.pageNameContent {
+    padding-left: 10px;
+    padding-right: 10px;
+    color :white;
+}

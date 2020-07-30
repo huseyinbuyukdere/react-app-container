@@ -1,0 +1,20 @@
+.menuItem {
+    min-width: 30px;          
+    width: 100%;   
+    box-sizing: border-box;             
+    padding: 10px 20px;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+    color:var(--rac-menuItem-fontColor);
+}
+
+div.menuItem:hover {
+    background-color: var(--rac-menuItem-hoverbgColor);
+    color: var(--rac-menuItem-hoverColor);
+}
+
+.selected {
+    background-color: var(--rac-menuItem-hoverbgColor);
+    color: var(--rac-menuItem-hoverColor);
+}

@@ -1,0 +1,10 @@
+:root {
+    --rac-sidebar-bgcolor : #322E2f;
+    --rac-header-bgcolor : #12A4D9;
+    --rac-main-bgcolor : #F1F3F2;
+    --rac-menuItem-fontColor : #909eaf;
+    --rac-menuItem-hoverbgColor : #32404c;
+    --rac-menuItem-hoverColor :white;
+    --rac-header-height : 55px;
+    --rac-sidebar-width : 200px;
+}

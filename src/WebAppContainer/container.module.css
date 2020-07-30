@@ -1,0 +1,29 @@
+.containerLeftMenu {
+    display: grid;  
+    grid-template-areas:
+      'menu header header header header'
+      'menu main main main main';  
+    height: 100vh;  
+    width: 100%;
+    grid-template-rows: var(--rac-header-height) 1fr;
+    grid-template-columns: var(--rac-sidebar-width)  1fr;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+    grid-area: menu;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: darkgray;    
+    background-color: var(--rac-sidebar-bgcolor);
+}
+
+.main {
+    grid-area: main;
+    background-color: var(--rac-main-bgcolor);
+}
+
+.header {
+    grid-area: header;    
+    background-color: var(--rac-header-bgcolor);
+}
