@@ -7,10 +7,11 @@ export interface ContainerRoute {
 }
 
 export interface MenuItem {
-    label: string
+    label?: string
     routeKey?: string
     iconName?: string
     iconComp?: any
+    customComp?: any
     onClick?: (routeKey?: string,path?:string) => void
     subMenuItemList?: MenuItem[]
 }

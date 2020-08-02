@@ -5,6 +5,8 @@
 }
 
 .menuItemContainer {
+    overflow: hidden;
+    display: block;
     height: 2.5rem;
     padding-top: 2px;
     padding-bottom: 2px;

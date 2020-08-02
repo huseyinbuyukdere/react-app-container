@@ -1,8 +1,10 @@
 
-.listContainer {
-    margin: 0px;
+.listContainer {    
     display: block;
+    position: absolute;
     overflow: hidden;    
+    transform: translateX(-75%);
+    border-radius: 8px;
     background-color: var(--rac-menuSubItem-listbgColor);
     transition: max-height 0.5s ease-in-out;
 }

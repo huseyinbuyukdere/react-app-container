@@ -12,38 +12,43 @@ interface MenuProps {
 
 export default function Menu(props: MenuProps) {
     var itemList = props.itemList ? props.itemList : []
+    itemList = itemList.filter((item) => (item.label && item.label!=='') || item.customComp);
 
     return (
         <div className={styles.menuContainer}>
             {itemList.map((item) => {
                 return (
-                    <div className={styles.menuExpandedItemContainer}>
+                    <React.Fragment>
                         {item.subMenuItemList ? (
-                            <MenuExpandableItem
-                                iconComp ={item.iconComp}
-                                iconName ={item.iconName}
-                                label = {item.label}                                
-                                subMenuItemList={item.subMenuItemList}
-                                selectedRouteKey ={props.selectedRouteKey}
-                                onClick = {(routeKey?: string) => {
-                                    if (item.onClick) item.onClick(routeKey)
-                                }}
-                            />
+                            <div>
+                                <MenuExpandableItem
+                                    iconComp={item.iconComp}
+                                    iconName={item.iconName}
+                                    label={item.label ? item.label : ''}
+                                    subMenuItemList={item.subMenuItemList}
+                                    selectedRouteKey={props.selectedRouteKey}
+                                    onClick={(routeKey?: string) => {
+                                        if (item.onClick) item.onClick(routeKey)
+                                    }}
+                                />
+                            </div>
                         ) : (
-                            <MenuItem
-                                iconComp={item.iconComp}
-                                iconName={item.iconName}
-                                label={item.label}
-                                isFlat={props.isFlat}
-                                isSelected={
-                                    item.routeKey === props.selectedRouteKey
-                                }
-                                onClick={(routeKey?: string) => {
-                                    if (item.onClick) item.onClick(routeKey)
-                                }}
-                            />
+                            <div className={styles.menuItemContainer}>
+                                <MenuItem
+                                    iconComp={item.iconComp}
+                                    iconName={item.iconName}
+                                    label={item.label ? item.label : ''}
+                                    isFlat={props.isFlat}
+                                    isSelected={
+                                        item.routeKey === props.selectedRouteKey
+                                    }
+                                    onClick={(routeKey?: string) => {
+                                        if (item.onClick) item.onClick(routeKey)
+                                    }}
+                                />
+                            </div>
                         )}
-                    </div>
+                    </React.Fragment>
                 )
             })}
         </div>

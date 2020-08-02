@@ -87,15 +87,57 @@ const designConfig: DesignConfig = {
             ]        
         }                    
     ],
-    sideBarHeaderContent: <div>Test</div>
+    sideBarHeaderContent: <div>Test</div>,
+    headerMenu:  [
+        {            
+            routeKey: 'Home'
+        },
+        {
+            routeKey: 'About',
+            iconName: 'home',
+            onClick: () => {
+                console.log('usersClick')
+            }
+        },
+        {
+            iconName : 'api',
+            subMenuItemList : [
+                {
+                    iconName : 'apps',
+                    routeKey :'About'
+                },
+                {
+                    iconName: 'radio_button_checked',
+                    onClick: () => {
+                        console.log('usersClick')
+                    }
+                }
+            ]        
+        },
+        {
+            iconName : 'api',
+            subMenuItemList : [
+                {
+                    label: 'SubMenu1',
+                    iconName : 'apps',
+                    routeKey :'About'
+                },
+                {
+                    label: 'SubMenu2',
+                    iconName: 'radio_button_checked',
+                    onClick: () => {
+                        console.log('usersClick')
+                    }
+                }
+            ]        
+        }                    
+    ]
 }
 
 function App() {
     return (
         <div>
-            <WebAppContainer designConfig={designConfig} routes={Routes}>
-                test
-            </WebAppContainer>
+            <WebAppContainer designConfig={designConfig} routes={Routes} />        
         </div>
     )
 }

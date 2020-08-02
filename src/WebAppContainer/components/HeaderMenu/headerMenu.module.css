@@ -1,0 +1,9 @@
+.headerMenuContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.headerMenuItemContainer {
+    padding-left: 5px;
+    padding-right: 5px;    
+}

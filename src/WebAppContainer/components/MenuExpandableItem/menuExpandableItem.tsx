@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './menuExpandableItem.module.css'
 import cn from 'classnames'
 import { MenuItem as MenuItemContract } from '../../models'
@@ -15,24 +15,45 @@ interface MenuExpandableItemProps {
 }
 
 const MenuExpandableItem = (props: MenuExpandableItemProps) => {
+    const isAnySelectedSubRoute = props.subMenuItemList.some(
+        (item) => item.routeKey === props.selectedRouteKey
+    )
+    const [isExpanded, setIsExpanded] = useState(isAnySelectedSubRoute)
 
-    const isAnySelectedSubRoute = props.subMenuItemList.some((item) => item.routeKey === props.selectedRouteKey)
-    const[isExpanded, setIsExpanded] = useState(isAnySelectedSubRoute);
-    var maxListHeight=isExpanded ?`calc(2.2rem*${props.subMenuItemList.length})`: '0px';
+    useEffect(() => {
+
+        var isAnySelectedSubRoute = props.subMenuItemList.some(
+            (item) => item.routeKey === props.selectedRouteKey
+        )
+        if(!isExpanded)
+        {
+            setIsExpanded(isAnySelectedSubRoute);
+        }      
+    // eslint-disable-next-line react-hooks/exhaustive-deps  
+    }, [props.selectedRouteKey])
+
+    var maxListHeight = isExpanded
+        ? `calc(4rem*${props.subMenuItemList.length})`
+        : '0px'
     return (
         <div>
-            <MenuItem
-                label={props.label}
-                iconComp={props.iconComp}
-                iconName={props.iconName}
-                rightIconName={isExpanded ? 'expand_less' : 'expand_more'}
-                rightIconCompStyle = {{height:'18px',width:'18px'}}
-                onClick={() => {
-                    setIsExpanded(!isExpanded);
-                }}
-                isSelected={false}
-            />
-            <div className={cn(styles.listContainer)} style={{maxHeight:maxListHeight}}>
+            <div className={styles.menuToggleContainer}>
+                <MenuItem
+                    label={props.label}
+                    iconComp={props.iconComp}
+                    iconName={props.iconName}
+                    rightIconName={isExpanded ? 'expand_less' : 'expand_more'}
+                    rightIconCompStyle={{ height: '18px', width: '18px' }}
+                    onClick={() => {
+                        setIsExpanded(!isExpanded)
+                    }}
+                    isSelected={false}
+                />
+            </div>
+            <div
+                className={cn(styles.listContainer)}
+                style={{ maxHeight: maxListHeight }}
+            >
                 {props.subMenuItemList.map((item) => {
                     var isSelected = props.selectedRouteKey === item.routeKey
                     var checkBoxIcon = (
@@ -53,10 +74,11 @@ const MenuExpandableItem = (props: MenuExpandableItemProps) => {
                         <div className={styles.menuItemContainer}>
                             <MenuItem
                                 style={{ paddingLeft: '40px' }}
-                                label={item.label}
+                                label={item.label ? item.label : ''}
                                 iconComp={checkBoxIcon}
                                 onClick={() => {
-                                    props.onClick(item.routeKey)
+                                    if(item.onClick)
+                                        item.onClick();
                                 }}
                                 isSelected={isSelected}
                             />

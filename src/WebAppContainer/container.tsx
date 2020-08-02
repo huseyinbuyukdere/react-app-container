@@ -49,6 +49,11 @@ const Container = (props: ContainerProps) => {
                 }
             }
 
+            if(item.subMenuItemList)
+            {
+                configureMenu(item.subMenuItemList);
+            }
+
             return item
         })
     }
