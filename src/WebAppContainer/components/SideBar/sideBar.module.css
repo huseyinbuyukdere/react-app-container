@@ -1,32 +1,30 @@
 .sideBarContainer {
-    width: 100%;    
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     padding-bottom: 10px;
     box-sizing: border-box;
-
 }
 
 .sideBarFooter {
-    color: white;    
-    margin-top: auto;        
+    color: white;
+    margin-top: auto;
 }
 
-
 .sideBarHeader {
-    color: white; 
-    width: 100%;       
+    color: white;
+    width: 100%;
     box-sizing: border-box;
     padding: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height : var(--rac-header-height);
+    height: var(--rac-header-height);
     border-bottom-width: 0.3px;
     border-bottom-style: solid;
-    border-bottom-color: #575c63;    
+    border-bottom-color: #575c63;
 }
 
 .headerContent {

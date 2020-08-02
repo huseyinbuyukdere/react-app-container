@@ -2,9 +2,9 @@
     display: flex;
     height: 100%;
     box-sizing: border-box;
-    padding :5px;
+    padding: 5px;
     align-items: center;
-    flex-direction: row;        
+    flex-direction: row;
 }
 
 .headerLeftContent {
@@ -18,5 +18,5 @@
 .pageNameContent {
     padding-left: 10px;
     padding-right: 10px;
-    color :white;
+    color: white;
 }

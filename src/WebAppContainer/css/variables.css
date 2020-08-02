@@ -1,10 +1,13 @@
 :root {
-    --rac-sidebar-bgcolor : #322E2f;
-    --rac-header-bgcolor : #12A4D9;
-    --rac-main-bgcolor : #F1F3F2;
-    --rac-menuItem-fontColor : #909eaf;
-    --rac-menuItem-hoverbgColor : #32404c;
-    --rac-menuItem-hoverColor :white;
-    --rac-header-height : 55px;
-    --rac-sidebar-width : 200px;
+    --rac-sidebar-bgcolor: #322e2f;
+    --rac-header-bgcolor: #12a4d9;
+    --rac-main-bgcolor: #f1f3f2;
+    --rac-menuItem-fontColor: #909eaf;
+    --rac-menuItem-hoverbgColor: #32404c;
+    --rac-menuSubItem-listbgColor: #2d4357;
+    --rac-menuItem-hoverColor: white;
+    --rac-header-height: 55px;
+    --rac-sidebar-width: 250px;
+    --rac-menuItem-selectedColor: white;
+    --rac-menuItem-selectedbgColor: #12a4d9;
 }

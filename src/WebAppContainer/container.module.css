@@ -1,12 +1,12 @@
 .containerLeftMenu {
-    display: grid;  
+    display: grid;
     grid-template-areas:
-      'menu header header header header'
-      'menu main main main main';  
-    height: 100vh;  
+        'menu header header header header'
+        'menu main main main main';
+    height: 100vh;
     width: 100%;
     grid-template-rows: var(--rac-header-height) 1fr;
-    grid-template-columns: var(--rac-sidebar-width)  1fr;    
+    grid-template-columns: var(--rac-sidebar-width) 1fr;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -14,7 +14,7 @@
     grid-area: menu;
     border-right-width: 1px;
     border-right-style: solid;
-    border-right-color: darkgray;    
+    border-right-color: darkgray;
     background-color: var(--rac-sidebar-bgcolor);
 }
 
@@ -24,6 +24,6 @@
 }
 
 .header {
-    grid-area: header;    
+    grid-area: header;
     background-color: var(--rac-header-bgcolor);
 }

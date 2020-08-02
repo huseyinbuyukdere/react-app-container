@@ -1,5 +1,11 @@
 .menuContainer {
     display: flex;
-    flex-direction: column; 
-    width: 100%;   
+    flex-direction: column;
+    width: 100%;
+}
+
+.menuItemContainer {
+    height: 2.5rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }

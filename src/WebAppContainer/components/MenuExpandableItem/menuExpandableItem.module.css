@@ -1,0 +1,41 @@
+
+.listContainer {
+    margin: 0px;
+    display: block;
+    overflow: hidden;    
+    background-color: var(--rac-menuItem-hvoer);
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+.subMenuItem {
+    display: list-item;    
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    list-style-type: disc;
+    color : var(--rac-menuItem-fontColor)
+}
+.subMenuItem:hover {
+    color : var(--rac-menuItem-hoverColor); 
+}
+
+.subItemIconContainer {
+    fill : var(--rac-menuItem-fontColor)
+}
+
+.selected {
+    fill : var(--rac-menuItem-hoverColor)
+}
+.menuExpandedItemContainer{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.menuItemContainer {
+    height: 2rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+

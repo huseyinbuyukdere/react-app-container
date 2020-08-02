@@ -1,12 +1,17 @@
 .menuItem {
-    min-width: 30px;          
-    width: 100%;   
-    box-sizing: border-box;             
-    padding: 10px 20px;
+    min-width: 30px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 6px 20px;
     user-select: none;
     -webkit-user-drag: none;
     cursor: pointer;
-    color:var(--rac-menuItem-fontColor);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--rac-menuItem-fontColor);
 }
 
 div.menuItem:hover {
@@ -15,6 +20,23 @@ div.menuItem:hover {
 }
 
 .selected {
-    background-color: var(--rac-menuItem-hoverbgColor);
-    color: var(--rac-menuItem-hoverColor);
+    background-color: var(--rac-menuItem-selectedbgColor);
+    color: var(--rac-menuItem-selectedColor);
+}
+
+div.menuItem.selected:hover {
+    background-color: var(--rac-menuItem-selectedbgColor);
+    color: var(--rac-menuItem-selectedColor);
+}
+
+.menuItemIcon {
+    fill: var(--rac-menuItem-fontColor);
+    height: 24px;
+    width: 24px;
+}
+.menuItemIconSelected {
+    fill: var(--rac-menuItem-hoverColor);
+}
+div.menuItem:hover .menuItemIcon {
+    fill: var(--rac-menuItem-hoverColor);
 }
