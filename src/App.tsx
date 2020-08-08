@@ -40,7 +40,7 @@ const designConfig: DesignConfig = {
     sideBarMenu: [
         {
             label: 'Home',
-            routeKey: 'Home'
+            iconName :'home'
         },
         {
             label: 'Users',
@@ -101,12 +101,15 @@ const designConfig: DesignConfig = {
         },
         {
             iconName : 'api',
+            label : 'testsşlakfşalkfşlaskşl',
             subMenuItemList : [
                 {
+                    label: 'SubMenu1dsaldkjasldjsalkjdlaskjdsaşldkasjşldkaşslkdşlsa',
                     iconName : 'apps',
                     routeKey :'About'
                 },
                 {
+                    label: 'SubMenu2',
                     iconName: 'radio_button_checked',
                     onClick: () => {
                         console.log('usersClick')
@@ -115,10 +118,11 @@ const designConfig: DesignConfig = {
             ]        
         },
         {
-            iconName : 'api',
+            iconName : 'settings',
+            label : 'settings',
             subMenuItemList : [
                 {
-                    label: 'SubMenu1',
+                    label: 'şsldkaşldkaşslkdşaslkşdlaskşsladkşlas',
                     iconName : 'apps',
                     routeKey :'About'
                 },
@@ -137,7 +141,9 @@ const designConfig: DesignConfig = {
 function App() {
     return (
         <div>
-            <WebAppContainer designConfig={designConfig} routes={Routes} />        
+            <WebAppContainer designConfig={designConfig}>
+                test
+            </WebAppContainer>        
         </div>
     )
 }

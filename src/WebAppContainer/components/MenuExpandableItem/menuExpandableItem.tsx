@@ -16,14 +16,14 @@ interface MenuExpandableItemProps {
 
 const MenuExpandableItem = (props: MenuExpandableItemProps) => {
     const isAnySelectedSubRoute = props.subMenuItemList.some(
-        (item) => item.routeKey === props.selectedRouteKey
+        (item) => props.selectedRouteKey ? item.routeKey === props.selectedRouteKey : false
     )
     const [isExpanded, setIsExpanded] = useState(isAnySelectedSubRoute)
 
     useEffect(() => {
 
         var isAnySelectedSubRoute = props.subMenuItemList.some(
-            (item) => item.routeKey === props.selectedRouteKey
+            (item) => props.selectedRouteKey ? item.routeKey === props.selectedRouteKey : false
         )
         if(!isExpanded)
         {
@@ -55,7 +55,7 @@ const MenuExpandableItem = (props: MenuExpandableItemProps) => {
                 style={{ maxHeight: maxListHeight }}
             >
                 {props.subMenuItemList.map((item) => {
-                    var isSelected = props.selectedRouteKey === item.routeKey
+                    var isSelected = props.selectedRouteKey ? item.routeKey === props.selectedRouteKey : false
                     var checkBoxIcon = (
                         <div
                             className={cn(

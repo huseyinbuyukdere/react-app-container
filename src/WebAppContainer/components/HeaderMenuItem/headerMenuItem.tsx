@@ -34,7 +34,7 @@ export default function MenuItem(props: MenuItemProps) {
             style={props.style}
             className={styles.menuItem}
         >
-            {iconComp && <div style={{ padding: '0px 3px' }}>{iconComp}</div>}
+            {iconComp && <div style={{ padding: '0px 5px' }}>{iconComp}</div>}
             {props.label && <div>{props.label}</div>}
         </div>
     )

@@ -2,13 +2,13 @@
     min-width: 30px;
     width: 100%;
     height: 100%;
+    line-height: 100%;
     box-sizing: border-box;
     user-select: none;
     -webkit-user-drag: none;
     cursor: pointer;
     font-size: 1rem;
     border-radius: 4px;
-    padding: 3px 5px;
     display: flex;
     flex-direction: row;
     align-items: center;

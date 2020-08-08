@@ -3,39 +3,20 @@
     display: block;
     position: absolute;
     overflow: hidden;    
-    transform: translateX(-75%);
-    border-radius: 8px;
+    border-radius: 8px;    
+    padding: 8px;
+    outline: none;
+    margin-left: -9999999px;
     background-color: var(--rac-menuSubItem-listbgColor);
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
 }
 
-
-.subMenuItem {
-    display: list-item;    
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    list-style-type: disc;
-    color : var(--rac-menuItem-fontColor)
-}
-.subMenuItem:hover {
-    color : var(--rac-menuItem-hoverColor); 
-}
-
-.subItemIconContainer {
-    fill : var(--rac-menuItem-fontColor)
-}
-
-.selected {
-    fill : var(--rac-menuItem-hoverColor)
-}
-.menuExpandedItemContainer{
-    padding-top: 2px;
-    padding-bottom: 2px;
+.expanded {
+    margin-left:  0px;
 }
 
 .menuItemContainer {
-    height: 2rem;
+    height: 2.5rem;
     padding-top: 2px;
     padding-bottom: 2px;
 }
@@ -43,8 +24,8 @@
 
 .menuToggleContainer {
     height: 2.5rem;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 3px 4px
+ 
 }
 
 

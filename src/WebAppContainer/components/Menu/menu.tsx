@@ -40,7 +40,7 @@ export default function Menu(props: MenuProps) {
                                     label={item.label ? item.label : ''}
                                     isFlat={props.isFlat}
                                     isSelected={
-                                        item.routeKey === props.selectedRouteKey
+                                        props.selectedRouteKey ? item.routeKey === props.selectedRouteKey : false
                                     }
                                     onClick={(routeKey?: string) => {
                                         if (item.onClick) item.onClick(routeKey)

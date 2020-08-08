@@ -7,8 +7,8 @@ import { useHistory } from 'react-router-dom'
 
 interface ContainerProps {
     children: any
-    selectedRoute: ContainerRoute
-    routes: ContainerRoute[]
+    selectedRoute?: ContainerRoute
+    routes?: ContainerRoute[]
     designConfig?: DesignConfig
 }
 
@@ -29,7 +29,7 @@ const Container = (props: ContainerProps) => {
             item.onClick = (routeKey?: string) => {
                 if (itemOnClick) itemOnClick()
                 var route;
-                if(routeKey){
+                if(routeKey && props.routes){
                     route = props.routes.find(
                         (route) => route.key === routeKey
                     )
@@ -39,7 +39,7 @@ const Container = (props: ContainerProps) => {
                     return;
                 }
 
-                if (item.routeKey) {
+                if (item.routeKey && props.routes) {
                     route = props.routes.find(
                         (route) => route.key === item.routeKey
                     )
