@@ -52,4 +52,4 @@
 //     return <Icon className={props.className} {...props} />
 // }
 
-// export default IconComponent
+// import React from 'react' export default Component

@@ -9,10 +9,28 @@ export interface ContainerRoute {
 export interface MenuItem {
     label?: string
     routeKey?: string
-    iconName?: string
+    iconName?:
+        | 'api'
+        | 'apps'
+        | 'code'
+        | 'dashboard'
+        | 'expand_less'
+        | 'expand_more'
+        | 'home'
+        | 'info'
+        | 'language'
+        | 'list'
+        | 'mail'
+        | 'mediation'
+        | 'message'
+        | 'perm_idenity'
+        | 'post_add'
+        | 'radio_button_checked'
+        | 'room'
+        | 'settings'
     iconComp?: any
     customComp?: any
-    onClick?: (routeKey?: string,path?:string) => void
+    onClick?: (routeKey?: string, path?: string) => void
     subMenuItemList?: MenuItem[]
 }
 

@@ -1,22 +1,22 @@
 import React from 'react'
-import  api  from './api.svg'
-import apps  from './apps.svg'
-import  code  from './code.svg'
-import  dashboard  from './dashboard.svg'
-import  home  from './home.svg'
-import  info  from './info.svg'
-import  language  from './language.svg'
-import  list  from './list.svg'
-import  mail  from './mail.svg'
-import  mediation  from './mediation.svg'
-import  message  from './message.svg'
-import  perm_identity  from './perm_identity.svg'
-import  post_add  from './post_add.svg'
-import  radio_button_checked  from './radio_button_checked.svg'
-import  room  from './room.svg'
-import  settings  from './settings.svg'
-import  expand_more from './expand_more.svg';
-import  expand_less from './expand_less.svg';
+import  api  from './api'
+import apps  from './apps'
+import  code  from './code'
+import  dashboard  from './dashboard'
+import  home  from './home'
+import  info  from './info'
+import  language  from './language'
+import  list  from './list'
+import  mail  from './mail'
+import  mediation  from './mediation'
+import  message  from './message'
+import  perm_identity  from './perm_identity'
+import  post_add  from './post_add'
+import  radio_button_checked  from './radio_button_checked'
+import  room  from './room'
+import  settings  from './settings'
+import  expand_more from './expand_more';
+import  expand_less from './expand_less';
 
 const iconTypes: any = {
     api,
@@ -53,4 +53,4 @@ const IconComponent = (props: IconComponentProps) => {
     return <Icon className={props.className} {...props} />
 }
 
-export default IconComponent
+ export default IconComponent
