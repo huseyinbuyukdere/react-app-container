@@ -65,15 +65,14 @@ const MenuExpandableItem = (props: MenuExpandableItemProps) => {
                         >
                             <IconComponent
                                 name="radio_button_checked"
-                                height={8}
-                                width={8}
+                                style={{height: '12px', width :'12px'}}
                             />
                         </div>
                     )
                     return (
                         <div className={styles.menuItemContainer}>
                             <MenuItem
-                                style={{ paddingLeft: '40px' }}
+                                style={{ paddingLeft: '40px', fontWeight :300 }}
                                 label={item.label ? item.label : ''}
                                 iconComp={checkBoxIcon}
                                 onClick={() => {

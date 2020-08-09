@@ -41,8 +41,8 @@ const iconTypes: any = {
 
 interface IconComponentProps {
     name: string
-    height?: number
-    width?: number
+    height?: string
+    width?: string
     fill?: string
     className?: string
     style?: any
@@ -50,6 +50,9 @@ interface IconComponentProps {
 
 const IconComponent = (props: IconComponentProps) => {
     let Icon = iconTypes[props.name]
+    if(!Icon){
+        return null;
+    }
     return <Icon className={props.className} {...props} />
 }
 
