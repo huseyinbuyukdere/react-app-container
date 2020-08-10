@@ -15,7 +15,7 @@ npm install react-app-container --save
 
 ## Demo
 
-https://huseyinbuyukdere.github.io/react-app-container/
+https://huseyinbuyukdere.github.io/
 
 ![enter image description here](https://github.com/huseyinbuyukdere/react-app-container/blob/master/docs/demo.png?raw=true)
 
