@@ -1,9 +1,17 @@
-# React App Container
+# React Application Container
 
 This is a basic visual and functional container for your pages. 
 This container includes admin panel design and -if you want - react-router.
 
 You can design your admin panel with basic configurations. You can use custom contents, predefined icons. You can use the panel with the react router with basic configurations. 
+
+## Installation
+
+**node.js:**
+
+```bash
+npm install react-app-container --save
+```
 
 ## Demo
 
