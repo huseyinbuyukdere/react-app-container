@@ -125,8 +125,6 @@ export default App;
 | routes               | []         | Array<[ContainerRoute](#container-route)>| Routes Configuration in Container for React Router           
 | children|          | Object| Content of the container when routes are empty or null
 
-
-{: id="foo"}
 ## Design Config 
 
 
