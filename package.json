@@ -1,6 +1,6 @@
 {
     "name": "react-app-container",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "React App Container",
     "main": "lib/index.js",
     "dependencies": {
